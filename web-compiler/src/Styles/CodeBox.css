@@ -1,0 +1,63 @@
+.InputBox {
+  display: flex;
+  background-color: #232439;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-right: solid #232439 30px;
+}
+.InputBoxLeft {
+  width: 5vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #292a3d;
+  font-size: 14px;
+  align-items: center;
+  overflow: scroll;
+  max-height: 50vh;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.InputContainer {
+  display: flex;
+  color: #f5efff;
+  margin-right: 2vw;
+}
+.codeInput {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  resize: none;
+  padding: 10px;
+  line-height: 2;
+  padding-right: 10px;
+}
+.InputBoxLeft::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.codeInput::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+.codeInput::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker on hover */
+  cursor: pointer;
+}
+.codeInput::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges */
+}
+.codeInput::-webkit-scrollbar-track {
+  background-color: transparent; /* Blends with the background */
+}
+.InputLineNum {
+  font-size: 14px;
+  height: 0px;
+}

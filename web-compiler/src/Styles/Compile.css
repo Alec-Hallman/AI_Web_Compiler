@@ -1,0 +1,18 @@
+.Compile-btn {
+  background-color: #585b7a;
+  border: none;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  width: 15vw;
+  height: 5vh;
+  margin-top: 2vw;
+  font-weight: 700;
+}
+.Compile-btn:hover {
+  cursor: pointer;
+}
+
+.Compile-btn:hover {
+  color: rgb(223, 221, 185);
+}

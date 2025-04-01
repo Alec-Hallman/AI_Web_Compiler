@@ -1,0 +1,25 @@
+.Error-container,
+.Error-header {
+  color: white;
+}
+
+.Error-container {
+  width: calc(90vw - 20px);
+  height: 15vh;
+  padding: 10px;
+  background-color: #6c6f91;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.Error-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 2vw;
+  display: flex;
+  width: calc(90vw - 20px);
+  height: 4vh;
+  font-size: 25px;
+  background-color: #747799;
+  align-items: center;
+  padding: 10px;
+}

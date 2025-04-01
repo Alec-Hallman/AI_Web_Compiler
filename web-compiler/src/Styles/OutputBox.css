@@ -1,0 +1,34 @@
+.Output-Container {
+  width: calc(50vw - 20px);
+  height: calc(42vh - 20px);
+  background-color: #545374;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-wrap: initial;
+  color: white;
+}
+.Output-Header {
+  height: 8vh;
+  width: 50vw;
+  background-color: #4f4e71;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.Header-Btn {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: white;
+  font-size: 2vw;
+  margin: 20px;
+}
+.Header-Btn:hover {
+  color: rgb(234, 235, 196);
+  cursor: pointer;
+}
