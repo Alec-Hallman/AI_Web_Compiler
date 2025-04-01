@@ -34,7 +34,13 @@ const OutputBox = () => {
           </button>
         </div>
         <div className="Output-Container">
-          {buttonState === 0 ? tokens : buttonState === 1 ? symTable : assembly}
+          <pre>
+            {buttonState === 0
+              ? tokens
+              : buttonState === 1
+              ? symTable
+              : assembly}
+          </pre>
         </div>
       </div>
     </>

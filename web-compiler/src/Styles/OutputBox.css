@@ -10,6 +10,7 @@
   overflow: hidden;
   text-wrap: initial;
   color: white;
+  overflow: scroll;
 }
 .Output-Header {
   height: 8vh;
@@ -31,4 +32,20 @@
 .Header-Btn:hover {
   color: rgb(234, 235, 196);
   cursor: pointer;
+}
+
+.Output-Container::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+.Output-Container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker on hover */
+  cursor: pointer;
+}
+.Output-Container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges */
+}
+.Output-Container::-webkit-scrollbar-track {
+  background-color: transparent; /* Blends with the background */
 }
