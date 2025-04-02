@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import OpenAI from "openai";
 export const appModel = createContext(null);
 

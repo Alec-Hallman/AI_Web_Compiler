@@ -1,7 +1,6 @@
 import { appModel } from "../Models/AppModel";
 import "../Styles/OutputBox.css";
 import { useContext, useState } from "react";
-import CompileButton from "./CompileButton";
 import CopyButton from "./CopyButton";
 const OutputBox = () => {
   const { tokens, symTable, assembly, info } = useContext(appModel);

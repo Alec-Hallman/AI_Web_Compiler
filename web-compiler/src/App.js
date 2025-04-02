@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import CodeField from "./Components/CodeBox";
 import AppManager from "./Models/AppModel";
