@@ -4,9 +4,58 @@ import OpenAI from "openai";
 export const appModel = createContext(null);
 
 const AppManager = ({ children }) => {
-  const [userInput, setInput] = useState("Write Code here!");
-  const [tokens, setTokens] = useState("Token Stream");
-  const [symTable, setTable] = useState("Symbol Table");
+  const [userInput, setInput] = useState(`def double f(int x, double y)
+if(x == 10) then
+int var;
+var = 10 + 2;
+fi;
+fed;`);
+  const [tokens, setTokens] = useState(`def       |    KEYWORD        
+double    |    KEYWORD        
+f         |    IDENTIFIER     
+(         |    DELIMITER      
+int       |    KEYWORD        
+x         |    IDENTIFIER     
+,         |    DELIMITER      
+double    |    KEYWORD        
+y         |    IDENTIFIER     
+)         |    DELIMITER      
+if        |    KEYWORD        
+(         |    DELIMITER      
+x         |    IDENTIFIER     
+==        |    COMPARATOR     
+10        |    INTEGER        
+)         |    DELIMITER      
+then      |    KEYWORD        
+int       |    KEYWORD        
+var       |    IDENTIFIER     
+;         |    DELIMITER      
+var       |    IDENTIFIER     
+=         |    ASSGN_OPERATOR 
+10        |    INTEGER        
++         |    MATH_OPERATOR  
+2         |    INTEGER        
+;         |    DELIMITER      
+fi        |    KEYWORD        
+;         |    DELIMITER      
+fed       |    KEYWORD        
+;         |    DELIMITER      
+.         |    END_PROGRAM`);
+  const [symTable, setTable] = useState(`Global Table:
+| name | type   | return type | is function | number of parameters | parameters      |
+|------|--------|-------------|-------------|----------------------|-----------------|
+| f    | double | double      | True        | 2                    | integer, double |
+
+Local Table: f
+| name | type   |
+|------|--------|
+| x    | integer|
+| y    | double |
+
+Local Table: if0
+| name | type    |
+|------|---------|
+| var  | integer `);
   const [header, setHeader] = useState("AI Compiler");
   let info = `Welcome to my AI Compiler!
 
@@ -27,7 +76,37 @@ How do you execute the code? Great question! Click on the link below, it will op
 paste the assembly code in and watch it run!
 
 Thanks for checking out this cursed project. Have fun!`;
-  const [assembly, setAssembly] = useState("Assembly Output");
+  const [assembly, setAssembly] =
+    useState(`.org 0x1000  // Start at memory location 1000
+.text        // Code section
+.global _start
+_start:
+
+// Store the input parameters into registers for x and y
+ldr r0, =X;
+ldr r1, [r0]
+
+if0:  // Label for the first if block
+cmp r1, #10        // Compare x with 10
+bne fed            // If x is not 10, skip to the end
+
+// Inside the if block
+// Declaring and initializing var
+ldr r2, =Var;
+ldr r3, =12;       // 10 + 2 = 12
+str r3, [r2]       // Store result in Var
+
+fed:
+// End of function
+_stop:
+b _stop
+
+.data      // Initialized data section
+X:
+.word 0    // Placeholder for x
+Var:
+.word 0    // Placeholder for var
+.end`);
   var [errorLog, setErrors] = useState("Errors will appear here:");
   function cleanReply(answer) {
     return answer.replace(/```[\w]*\n?/g, "").trim(); //remove ``` ```` from open ai replies

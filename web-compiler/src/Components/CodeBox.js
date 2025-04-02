@@ -1,15 +1,15 @@
 import { appModel } from "../Models/AppModel";
 import "../Styles/CodeBox.css";
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 
 const CodeField = () => {
   const { setInput, userInput } = useContext(appModel);
   const [lineNumber, setLines] = useState([""]);
   const lineNumContainer = useRef(null);
   const inputContainer = useRef(null);
-  function countLines(text) {
-    setLines(text.split("\n"));
-  }
+  useEffect(() => {
+    setLines(userInput.split("\n"));
+  }, [userInput]);
   const syncScroll = (e) => {
     if (lineNumContainer.current && inputContainer.current) {
       if (e.target === inputContainer.current) {
@@ -40,7 +40,6 @@ const CodeField = () => {
             value={userInput}
             onChange={(e) => {
               setInput(e.target.value);
-              countLines(e.target.value);
             }}
           />
         </div>
