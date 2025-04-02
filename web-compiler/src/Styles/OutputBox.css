@@ -59,3 +59,17 @@ a {
 .Output-Container::-webkit-scrollbar-track {
   background-color: transparent; /* Blends with the background */
 }
+
+@media (max-width: 700px) {
+  .Output-Container {
+    min-width: 250px;
+    width: 70vw;
+  }
+  .Output-Header {
+    width: 75vw;
+    min-width: 270px;
+  }
+  .Header-Btn {
+    font-size: max(2vw, 14px);
+  }
+}

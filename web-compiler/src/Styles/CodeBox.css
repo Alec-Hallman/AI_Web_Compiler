@@ -62,3 +62,12 @@
   font-size: 14px;
   height: 0px;
 }
+@media (max-width: 700px) {
+  .InputBox {
+    width: 58vw;
+    min-width: 240px;
+  }
+  .InputContainer {
+    margin-bottom: 2vw;
+  }
+}

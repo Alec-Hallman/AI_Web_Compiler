@@ -4,12 +4,17 @@
 }
 .app {
   display: flex;
-  width: 100vw;
-  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 body {
   background-color: #65678f;
+}
+@media (max-width: 700px) {
+  .InputOutput-Container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -13,6 +13,7 @@
 .Copy-btn {
   font-size: 25px;
   width: 10vw;
+  min-width: 130px;
   height: 4vh;
   background-color: #7e7da865;
 }
@@ -22,9 +23,16 @@
   width: 10vw;
   background-color: #585b7a;
   height: 4vh;
+  min-width: 130px;
 }
 .Compile-btn:hover,
 .Copy-btn:hover {
   color: rgb(223, 221, 185);
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .Compile-btn {
+    margin-bottom: 5vh;
+  }
 }

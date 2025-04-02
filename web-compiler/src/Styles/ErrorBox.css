@@ -43,3 +43,14 @@
 .Error-container::-webkit-scrollbar-track {
   background-color: transparent; /* Blends with the background */
 }
+
+@media (max-width: 700px) {
+  .Error-container {
+    min-width: 250px;
+    width: 70vw;
+  }
+  .Error-header {
+    width: 70vw;
+    min-width: 250px;
+  }
+}

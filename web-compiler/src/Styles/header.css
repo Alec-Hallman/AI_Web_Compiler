@@ -2,10 +2,15 @@
   color: white;
 }
 .header-container {
-  width: 100vw;
-  height: 0px;
   margin-bottom: 2vw;
   color: white;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .header-text,
+  .header-container {
+    font-size: 10px;
+  }
 }

@@ -9,7 +9,7 @@ import AppHeader from "./Components/Header";
 
 function App() {
   return (
-    <>
+    <div>
       <AppManager>
         <AppHeader></AppHeader>
         <div className="app">
@@ -21,7 +21,7 @@ function App() {
           <CompileButton></CompileButton>
         </div>
       </AppManager>
-    </>
+    </div>
   );
 }
 
