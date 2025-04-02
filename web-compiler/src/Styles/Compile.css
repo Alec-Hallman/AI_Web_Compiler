@@ -1,18 +1,30 @@
-.Compile-btn {
-  background-color: #585b7a;
+.Compile-btn,
+.Copy-btn {
   border: none;
   color: white;
-  font-size: 25px;
   border-radius: 10px;
-  width: 15vw;
-  height: 5vh;
-  margin-top: 2vw;
   font-weight: 700;
 }
-.Compile-btn:hover {
-  cursor: pointer;
+.Copy-Container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
-
-.Compile-btn:hover {
+.Copy-btn {
+  font-size: 25px;
+  width: 10vw;
+  height: 4vh;
+  background-color: #7e7da865;
+}
+.Compile-btn {
+  font-size: 25px;
+  margin-top: 2vw;
+  width: 10vw;
+  background-color: #585b7a;
+  height: 4vh;
+}
+.Compile-btn:hover,
+.Copy-btn:hover {
   color: rgb(223, 221, 185);
+  cursor: pointer;
 }

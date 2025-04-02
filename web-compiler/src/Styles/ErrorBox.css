@@ -10,6 +10,9 @@
   background-color: #6c6f91;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 650px;
 }
 .Error-header {
   border-top-left-radius: 10px;
@@ -17,9 +20,26 @@
   margin-top: 2vw;
   display: flex;
   width: calc(90vw - 20px);
+  min-width: 650px;
   height: 4vh;
   font-size: 25px;
   background-color: #747799;
   align-items: center;
   padding: 10px;
+}
+
+.Error-container::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
+}
+.Error-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker on hover */
+  cursor: pointer;
+}
+.Error-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded edges */
+}
+.Error-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Blends with the background */
 }
