@@ -1,0 +1,11 @@
+.header-text {
+  color: white;
+}
+.header-container {
+  width: 100vw;
+  height: 0px;
+  margin-bottom: 2vw;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
