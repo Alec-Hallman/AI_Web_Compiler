@@ -35,7 +35,7 @@ Thanks for checking out this cursed project. Have fun!`;
   async function LexicalAnalysis() {
     setHeader("Running Lexical Analysis");
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
       dangerouslyAllowBrowser: true, // Required for browser use
     });
     const response = await client.responses.create({
@@ -701,23 +701,23 @@ ${userInput}`,
     answer = cleanReply(answer);
     console.log(`Asked chat and got: ${answer}`);
     setErrors(answer);
-    answer = await TokenStream();
-    answer = cleanReply(answer);
-    setTokens(answer);
-    answer = await SyntaxAnalysis();
-    answer = cleanReply(answer);
-    console.log(`Asked chat and got: ${answer}`);
-    setErrors((prevErrors) => prevErrors + "\n" + answer);
-    answer = await SymbolTable();
-    answer = cleanReply(answer);
-    console.log(`Asked chat and got: ${answer}`);
-    setTable(answer);
-    answer = await SemanticAnalysis();
-    answer = cleanReply(answer);
-    setErrors((prevErrors) => prevErrors + "\n" + answer);
-    answer = await GenerateAssembly();
-    answer = cleanReply(answer);
-    setAssembly(answer);
+    // answer = await TokenStream();
+    // answer = cleanReply(answer);
+    // setTokens(answer);
+    // answer = await SyntaxAnalysis();
+    // answer = cleanReply(answer);
+    // console.log(`Asked chat and got: ${answer}`);
+    // setErrors((prevErrors) => prevErrors + "\n" + answer);
+    // answer = await SymbolTable();
+    // answer = cleanReply(answer);
+    // console.log(`Asked chat and got: ${answer}`);
+    // setTable(answer);
+    // answer = await SemanticAnalysis();
+    // answer = cleanReply(answer);
+    // setErrors((prevErrors) => prevErrors + "\n" + answer);
+    // answer = await GenerateAssembly();
+    // answer = cleanReply(answer);
+    // setAssembly(answer);
     setHeader("Code Compiled! Hopefully it's correct!");
   }
   return (
