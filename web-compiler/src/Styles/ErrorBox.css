@@ -10,8 +10,7 @@
   background-color: #6c6f91;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: scroll;
   min-width: 650px;
 }
 .Error-header {
