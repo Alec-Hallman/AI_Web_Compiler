@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { appModel } from "../Models/AppModel";
-import OpenAI from "openai";
 import "../Styles/Compile.css";
 
 const CompileButton = () => {
