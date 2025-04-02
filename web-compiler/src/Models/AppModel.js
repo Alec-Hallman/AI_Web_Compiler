@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createContext, useState } from "react";
 import OpenAI from "openai";
 export const appModel = createContext(null);
@@ -734,6 +735,9 @@ ${userInput}`,
         Compile,
         setErrors,
         setHeader,
+        setTokens,
+        setTable,
+        setAssembly,
       }}
     >
       {children}
