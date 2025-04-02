@@ -34,7 +34,10 @@ Thanks for checking out this cursed project. Have fun!`;
 
   async function LexicalAnalysis() {
     setHeader("Running Lexical Analysis");
-    const client = new OpenAI();
+    const client = new OpenAI({
+      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
+      dangerouslyAllowBrowser: true, // Required for browser use
+    });
     const response = await client.responses.create({
       model: "gpt-4o",
       input: `
