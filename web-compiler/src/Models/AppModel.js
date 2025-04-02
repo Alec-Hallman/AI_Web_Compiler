@@ -75,10 +75,7 @@ ${userInput}`,
   }
   async function TokenStream() {
     setHeader("Generating Token Stream");
-    const client = new OpenAI({
-      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-      dangerouslyAllowBrowser: true, // Required for browser use
-    });
+    const client = new OpenAI();
     const response = await client.responses.create({
       model: "gpt-4o",
       input: `You do not do conversational replies also do not reply with any quotation marks in your response. Your job is to read the user input word by word and tokenize it according to predefined categories. 
@@ -199,10 +196,7 @@ Here is the user's input for you to tokenize. ${userInput}`,
     setHeader(
       "Analyzing Syntax... This may take a while (30 seconds -> multiple minutes)"
     );
-    const client = new OpenAI({
-      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-      dangerouslyAllowBrowser: true, // Required for browser use
-    });
+    const client = new OpenAI();
     const response = await client.responses.create({
       model: "o1-2024-12-17", //Use O1 this is too compicated for simple GPT (rip wallet)
       input: `
@@ -300,10 +294,7 @@ Syntax error found 10.2; [semicolon after return statement is not allowed]
   }
   async function SymbolTable() {
     setHeader("Generating Symbol Table");
-    const client = new OpenAI({
-      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-      dangerouslyAllowBrowser: true, // Required for browser use
-    });
+    const client = new OpenAI();
     const response = await client.responses.create({
       model: "gpt-4o",
       input: `
@@ -371,10 +362,7 @@ ${userInput}`,
   }
   async function SemanticAnalysis() {
     setHeader("Checking for Semantic Errors");
-    const client = new OpenAI({
-      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-      dangerouslyAllowBrowser: true, // Required for browser use
-    });
+    const client = new OpenAI();
     const response = await client.responses.create({
       model: "gpt-4o",
       input: `
@@ -460,10 +448,7 @@ ${userInput}`,
   }
   async function GenerateAssembly() {
     setHeader("Generating Assembly Code");
-    const client = new OpenAI({
-      apiKey: process.env.REACT_APP_OPENAI_API_KEY,
-      dangerouslyAllowBrowser: true, // Required for browser use
-    });
+    const client = new OpenAI();
     const response = await client.responses.create({
       model: "gpt-4o",
       input: `
